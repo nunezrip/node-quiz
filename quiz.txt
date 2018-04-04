@@ -1,0 +1,89 @@
+Q.1 - Node.js is a server-side JavaScript environment. Node.js is a web application framework built on Google Chrome's JavaScript EngineV8Engine. It uses an asynchronous event-driven model and is designed for writing scalable internet applications, notably web servers. Node.js gets excellent performance based on the architectures of many Internet applications. Programs are written in JavaScript, using event-driven, asynchronous I/O to minimize overhead and maximize scalability. Node.js, uses an event loop instead of threads. It is able to scale to millions of concurrent connections. Every I/O operation in Node.js is asynchronous. The server continues to process incoming requests while the I/O operation is taking place. This event-based model makes Node.js very fast, and makes scaling real-time applications very easy. Node.js is well-suited for building sites that require real-time, asynchronous interaction.  Chat sites are one example that really require this.
+
+Q.2 - npm is not part of the node core.  Only node.js packages comes with npm. Only if you are installing it using an .msi , .exe , .dmg .pkg , .deb or using a package installer like apt-get , yum or brew , you'll have both node and npm. 
+
+Q.3 - app.POST
+
+Q.4 - Parses out application/json 
+
+Q.5 - Serves static files such as images, CSS files, and JavaScript files, using the express.static built-in middleware function in Express to a directory named "public".
+
+Q.6 - STOCK MAREKT APP API
+
+{
+  stock_name: string,
+  stock_symbol: string,
+  stock_price: number,
+  price_time_date: date.now,
+  trading_instrument: string
+}
+
+1) '/stocks', GET Serve back the stock collection
+2) '/stocks/:id', GET, Serve back one stock identified by the id
+3) '/stocks', POST, Create a new stock
+4) '/stocks/:id', PUT, Update an existing stock in our db
+5)'stocks/id:', DELETE, Delete a stock from our db
+
+"GET /stocks": {
+  "desc": "returns all items",
+  "response": "200 application/json",
+  "data:: "[{}, {}, {}]"
+},
+
+"GET /stocks/id": {
+"desc": "returns one stock identified by its id",
+"response": "200 aplication/json",
+"data": "{}"
+},
+
+"POST /stocks": {
+  "desc": "create and return a new stock",
+  "response": "201 application/json",
+  "data": "{}"
+},
+
+"PUT /stocks/id": {
+  "desc": "update and return the matching stock based on the id",
+  "response": "200 application/json",
+  "data": "{}"
+},
+
+"DELETE /stocks/id": {
+  "desc": "delete and return a matching stock",
+  "response": "200 application/json",
+  "data": "{}"
+},
+}
+
+Q.7 - Node's "event loop" is central to being able to handle high throughput scenarios. Node.js is a single-threaded application, but it can support concurrency via the concept of event and callbacks. Every API of Node.js is asynchronous and being single-threaded, they use async function calls to maintain concurrency. In event-driven programming the application flow control is determined by events or changes in state. The general implementation is to have a central mechanism that listens for events and calls a callback function once an event has been detected (i.e. state has changed).  Node uses observer pattern. Node thread keeps an event loop and whenever a task gets completed, it fires the corresponding event which signals the event-listener function to execute.  Node.js uses events heavily and it is also one of the reasons why Node.js is pretty fast compared to other similar technologies. As soon as Node starts its server, it simply initiates its variables, declares functions and then simply waits for the event to occur.  In an event-driven application, there is generally a main loop that listens for events, and then triggers a callback function when one of those events is detected.
+
+Q.8 - A callback function is a function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action.  
+
+Q.9 - In synchronous program execution your program is executed line by line, one line at a time  on a single thread. Each time a function is called, program execution waits until that function returns before continuing to the next line of code. This method of execution can have undesirable ramifications. With synchronous execution, your program is “stuck,” waiting for the process to end, with no way out. Asynchronous execution avoids this bottleneck by executing other code while the running code executes. 
+
+Q.10 - All npm packages contain a file, usually in the project root, called package.json - this file holds various metadata relevant to the project. This file is used to give information to npm that allows it to identify the project as well as handle the project's dependencies. It can also contain other metadata such as a project description, the version of the project in a particular distribution, license information, even configuration data - all of which can be vital to both npm and to the end users of the package. The package.json file is normally located at the root directory of a Node.js project.
+
+Q.11 - the fs module is used for file based operations i.e., 
+       var fs = require("fs")
+
+Q.12 - The open() method opens a file by passing a file name to the method (or path string), along with how to open the file using a flag as the second parameter.
+
+Q.13 - The global variable __dirname, which is the same as the path.dirname() function of the __filename, will give you the directory in which the executing file is located.  To find the directory of the file you’re currently executing or the directory from which the Node command was called. This can be useful when requiring other files, reading or writing logs, and executing various filesystem-level functions.  There are at least three ways to refer to the current directory in Node; but __dirname is the most common method. It gives you the path of the currently running file.
+
+Q.14 - No, you cannot access DOM in node.
+
+Q.15 - If application has to wait for some I/O operation in order to complete its execution any further then the code responsible for waiting is known as blocking code. Node.js solves this problem by providing a callback function. The callback function gets called whenever a corresponding event is triggered.
+ 
+ Q.16 - Express JS.
+
+ Q.17 - 
+ 
+ app.get('/data', (req, res) => {
+	res.json(jsonData);
+});
+
+ Q.18 - CRUD: Create/Read/Update/Delete
+
+ Q.19 - Node.js was originally written by Ryan Dahl in 2009, about thirteen years after the introduction of the first server-side JavaScript environment, Netscape's LiveWire Pro Web. The initial release supported only Linux and Mac OS X. Its development and maintenance was led by Dahl and later sponsored by Joyent.
+
+ Q.20 - Bby using "module.export" to export that particular module and make it accessible to other modules using the keyword "require".
